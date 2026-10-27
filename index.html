@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thirumala & Madhuri - Wedding Invitation</title>
+    
+    <!-- Google Fonts for Elegant Typography -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Great+Vibes&family=Lora:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS for Styling -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        cream: {
+                            DEFAULT: '#FDF8F0',
+                            light: '#FFFDFC'
+                        },
+                        maroon: {
+                            DEFAULT: '#800000',
+                            dark: '#5A0000',
+                            light: '#A52A2A'
+                        },
+                        gold: {
+                            DEFAULT: '#D4AF37',
+                            light: '#F3E5AB',
+                            dark: '#AA8C2C'
+                        }
+                    },
+                    fontFamily: {
+                        'cinzel': ['Cinzel', 'serif'],
+                        'vibes': ['Great Vibes', 'cursive'],
+                        'lora': ['Lora', 'serif'],
+                    },
+                    backgroundImage: {
+                        'mandala-pattern': "url('data:image/svg+xml,%3Csvg width=\\'60\\' height=\\'60\\' viewBox=\\'0 0 60 60\\' xmlns=\\'http://www.w3.org/2000/svg\\'%3E%3Cg fill=\\'none\\' fill-rule=\\'evenodd\\'%3E%3Cg fill=\\'%23d4af37\\' fill-opacity=\\'0.15\\'%3E%3Cpath d=\\'M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z\\'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')"
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Custom CSS for Animations and Ornaments -->
+    <style>
+        body {
+            background-color: #FDF8F0;
+        }
+
+        .animate-fade-in-up {
+            opacity: 0;
+            transform: translateY(30px);
+            animation: fadeInUp 1s ease-out forwards;
+        }
+
+        .delay-100 { animation-delay: 0.2s; }
+        .delay-200 { animation-delay: 0.4s; }
+        .delay-300 { animation-delay: 0.6s; }
+        .delay-400 { animation-delay: 0.8s; }
+        .delay-500 { animation-delay: 1.0s; }
+
+        @keyframes fadeInUp {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Decorative Borders */
+        .card-border {
+            position: relative;
+            border: 2px solid #D4AF37; /* Gold */
+            background-color: rgba(255, 255, 255, 0.95);
+        }
+        
+        .card-border::before {
+            content: '';
+            position: absolute;
+            top: 6px;
+            left: 6px;
+            right: 6px;
+            bottom: 6px;
+            border: 1px solid #800000; /* Maroon */
+            pointer-events: none;
+        }
+
+        /* Traditional Divider */
+        .divider {
+            display: flex;
+            align-items: center;
+            text-align: center;
+            color: #D4AF37;
+            margin: 1.5rem 0;
+        }
+        .divider::before, .divider::after {
+            content: '';
+            flex: 1;
+            border-bottom: 1px solid #D4AF37;
+        }
+        .divider::before { margin-right: .5em; }
+        .divider::after { margin-left: .5em; }
+        
+        /* Mandala Corners */
+        .corner-tl, .corner-tr, .corner-bl, .corner-br {
+            position: absolute;
+            width: 80px;
+            height: 80px;
+            background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" fill="%23D4AF37"><path d="M0 0h100v10C44.8 10 10 44.8 10 100H0V0z"/></svg>');
+            background-repeat: no-repeat;
+            pointer-events: none;
+            opacity: 0.6;
+        }
+        .corner-tl { top: 0; left: 0; }
+        .corner-tr { top: 0; right: 0; transform: scaleX(-1); }
+        .corner-bl { bottom: 0; left: 0; transform: scaleY(-1); }
+        .corner-br { bottom: 0; right: 0; transform: scale(-1, -1); }
+    </style>
+</head>
+<body class="bg-cream font-lora text-maroon antialiased min-h-screen relative bg-mandala-pattern flex items-center justify-center p-4 sm:p-8">
+
+    <!-- Main Invitation Container -->
+    <div class="card-border w-full max-w-4xl shadow-2xl p-8 sm:p-12 relative z-10 animate-fade-in-up">
+        
+        <!-- Corner Decorations -->
+        <div class="corner-tl"></div>
+        <div class="corner-tr"></div>
+        <div class="corner-bl"></div>
+        <div class="corner-br"></div>
+
+        <!-- Top Icon / Auspicious Symbol (Om / Ganesha representation) -->
+        <div class="flex justify-center mb-6 animate-fade-in-up delay-100">
+            <svg class="w-16 h-16 text-maroon" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <!-- Abstract traditional kalash/flower icon as placeholder for religious symbol -->
+                <path d="M12 2C9 2 7 4 7 7c0 1.5.5 2.8 1.4 3.9-.3.6-.6 1.4-.8 2.1H5v2h2.2c-.1.7-.2 1.3-.2 2 0 3.3 2.7 6 6 6s6-2.7 6-6c0-.7-.1-1.3-.2-2H19v-2h-2.6c-.2-.8-.5-1.5-.8-2.1C16.5 9.8 17 8.5 17 7c0-3-2-5-5-5zm0 2c1.7 0 3 1.3 3 3 0 1.3-.8 2.5-2 2.9v1.2c-1.3.1-2.5.6-3.4 1.5C9.2 11.2 9 9.7 9 8.2 9 5.9 10.3 4 12 4zm0 16c-2.2 0-4-1.8-4-4 0-1.3.6-2.5 1.6-3.2.7.6 1.5 1.1 2.4 1.2v2h2v-2c.9-.1 1.7-.6 2.4-1.2 1 .7 1.6 1.9 1.6 3.2 0 2.2-1.8 4-4 4z"/>
+            </svg>
+        </div>
+
+        <!-- Header -->
+        <div class="text-center animate-fade-in-up delay-100 mb-8">
+            <h1 class="font-cinzel text-2xl sm:text-4xl font-bold tracking-wider mb-2 text-maroon uppercase">
+                Teluginti Family
+            </h1>
+            <h2 class="font-vibes text-3xl sm:text-4xl text-maroon-light">Wedding Invitation</h2>
+        </div>
+
+        <div class="divider animate-fade-in-up delay-200">
+            <span class="px-2 text-gold-dark text-xl font-cinzel">✧</span>
+        </div>
+
+        <!-- Parents & Groom section -->
+        <div class="text-center animate-fade-in-up delay-200 mt-8">
+            <p class="text-sm sm:text-base font-semibold uppercase tracking-wide mb-2 text-maroon-dark">
+                Smt. Teluginti Madhumalathi & Late Sri. Teluginti Chandra Shekar Reddy
+            </p>
+            <p class="text-sm sm:text-base italic mb-6">Solicit your gracious presence on the auspicious occasion of the wedding of their son</p>
+            
+            <h3 class="font-vibes text-5xl sm:text-6xl text-maroon font-semibold mb-2">
+                Chi. Thirumala Reddy <span class="font-lora text-lg sm:text-xl font-normal">B.Tech.</span>
+            </h3>
+        </div>
+
+        <div class="text-center my-6 animate-fade-in-up delay-300">
+            <span class="inline-block px-6 py-2 border-y-2 border-gold font-cinzel text-xl text-maroon-light bg-cream rounded-full">
+                With
+            </span>
+        </div>
+
+        <!-- Bride section -->
+        <div class="text-center animate-fade-in-up delay-300 mb-8">
+            <h3 class="font-vibes text-5xl sm:text-6xl text-maroon font-semibold mb-4">
+                Chi. Kum. Sou. Madhuri <span class="font-lora text-lg sm:text-xl font-normal">B.Tech.</span>
+            </h3>
+            
+            <p class="text-sm sm:text-base italic mb-2">Eldest Daughter of</p>
+            <p class="text-sm sm:text-base font-semibold uppercase tracking-wide text-maroon-dark">
+                Smt. K. Bharathi & Sri K Hari Krishna Reddy
+            </p>
+        </div>
+
+        <div class="divider animate-fade-in-up delay-400">
+            <span class="px-2 text-gold-dark text-xl font-cinzel">✧</span>
+        </div>
+
+        <!-- Events Section -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-12 mt-8 animate-fade-in-up delay-400">
+            
+            <!-- Reception Details -->
+            <div class="text-center p-6 border border-gold-light bg-cream-light rounded-lg shadow-inner">
+                <div class="w-12 h-12 mx-auto bg-maroon rounded-full flex items-center justify-center mb-4 border-2 border-gold shadow-md">
+                    <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 15.546c-.523 0-1.046.151-1.5.454-1.124.75-2.876.75-4 0-.454-.303-.977-.454-1.5-.454s-1.046.151-1.5.454c-1.124.75-2.876.75-4 0-.454-.303-.977-.454-1.5-.454s-1.046.151-1.5.454c-.21.14-.42.25-.631.332A10.005 10.005 0 0112 2C6.477 2 2 6.477 2 12c0 2.553.957 4.885 2.531 6.657a5.006 5.006 0 001.077 2.15C6.115 21.365 6.54 22 7.023 22h9.954c.483 0 .908-.635 1.415-1.193a5.006 5.006 0 001.077-2.15c1.574-1.772 2.531-4.104 2.531-6.657 0-.583-.05-1.155-.148-1.713A4.996 4.996 0 0021 15.546z"></path></svg>
+                </div>
+                <h4 class="font-cinzel text-xl font-bold mb-3 text-maroon uppercase">Reception</h4>
+                <p class="font-bold text-lg mb-1">Saturday, 14th Nov 2026</p>
+                <p class="text-maroon-light font-medium mb-3">Evening at 7:00 P.M.</p>
+            </div>
+
+            <!-- Muhurtham Details -->
+            <div class="text-center p-6 border border-gold-light bg-cream-light rounded-lg shadow-inner">
+                <div class="w-12 h-12 mx-auto bg-maroon rounded-full flex items-center justify-center mb-4 border-2 border-gold shadow-md">
+                    <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                </div>
+                <h4 class="font-cinzel text-xl font-bold mb-3 text-maroon uppercase">Muhurtham</h4>
+                <p class="font-bold text-lg mb-1">Sunday, 15th Nov 2026</p>
+                <p class="text-maroon-light font-medium mb-1">Morning at 9:00 A.M. to 9:40 A.M.</p>
+                <p class="text-sm font-semibold italic text-gold-dark">(Dhanur Lagnam)</p>
+            </div>
+            
+        </div>
+
+        <!-- Venue Section -->
+        <div class="mt-10 text-center animate-fade-in-up delay-500">
+            <h4 class="font-cinzel text-lg font-bold mb-2 text-maroon uppercase tracking-widest">Venue</h4>
+            <p class="text-base sm:text-lg font-medium leading-relaxed mb-6">
+                <strong>Basava Bhavan</strong><br>
+                Beguru Main Road, Hongasandra,<br>
+                BANGALORE.
+            </p>
+
+            <!-- Map Button -->
+            <a href="https://maps.app.goo.gl/nFN4p2eNkxm8CxvP8" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center gap-2 bg-maroon text-cream font-cinzel font-bold py-3 px-8 rounded-full border-2 border-gold hover:bg-gold hover:text-maroon-dark transition-all duration-300 shadow-lg transform hover:-translate-y-1">
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
+                View Location on Maps
+            </a>
+        </div>
+
+        <!-- Footer -->
+        <div class="mt-12 pt-6 border-t border-gold-light text-center animate-fade-in-up delay-500">
+            <p class="text-sm italic font-medium text-maroon-light">
+                With Best Compliments From:
+            </p>
+            <p class="text-base font-semibold mt-1">
+                Vasalli's Family's, Teluginti Family's <br class="sm:hidden"> and Friends & Relatives
+            </p>
+        </div>
+
+    </div>
+
+</body>
+</html>
